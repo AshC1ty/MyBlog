@@ -4,3 +4,4 @@
 3. Using classnames instead of IDs
 4. React Router DOM
 5. Yarn
+6. React Scripts
