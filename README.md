@@ -7,3 +7,4 @@
 6. React Scripts
 7. Outlet Tag
 8. Browser Router
+9. Box Sizing
