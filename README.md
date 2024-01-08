@@ -5,3 +5,5 @@
 4. React Router DOM
 5. Yarn
 6. React Scripts
+7. Outlet Tag
+8. Browser Router
