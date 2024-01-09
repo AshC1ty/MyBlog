@@ -12,3 +12,5 @@
 11. CORS
 12. Express
 13. Fetch Method
+14. Bcrypt.js
+15. Json Web Tokens
