@@ -14,3 +14,4 @@
 13. Fetch Method
 14. Bcrypt.js
 15. Json Web Tokens
+Present Issue: Request sent from login and register are empty, no response but no error as well
