@@ -5,12 +5,14 @@ const mongoose = require('mongoose')
 const User = require('./models/User.js')
 const bcrypt = require('bcryptjs');
 const jwt = require("jsonwebtoken")
+const cookieParser = require('cookie-parser')
 
 const salt = bcrypt.genSaltSync(10);
 const secret = "gfsdhugfy8uwefg87eqydfgbe78fg1387ry824eyybfe8fd"
 
 app.use(cors({credentials:true, origin:'http://localhost:3000'}));
 app.use(express.json());
+app.use(cookieParser)
 
 mongoose.connect("mongodb+srv://AshC1ty:lt_ghost@tempposts.ynrdfkg.mongodb.net/?retryWrites=true&w=majority");
 
@@ -28,7 +30,7 @@ app.post('/register',async (req,res)=>{
 app.post('/login',async (req,res)=>{
     const {username,password} = req.body;
     const userDoc = await User.findOne({username});
-    if(userDoc!= null){
+    
     const passOk = bcrypt.compareSync(password, userDoc.password);
     if(passOk){
         //loggedIn
@@ -38,9 +40,11 @@ app.post('/login',async (req,res)=>{
         })
     } else{
         res.status(400).json('WrongCredentials');
-    }}else{
-        alert("User doesn't exist")
     }
+})
+
+app.get('/profile', (req,res)=>{
+    res.json(req.cookies);
 })
 
 app.listen(4000);
