@@ -1,7 +1,8 @@
 # MyBlog
-01. Experience with grid style display
-02. Learnt the gap property
-03. Using classnames instead of IDs
+Concepts I learnt from this project
+01. grid style display
+02. gap property
+03. classnames instead of IDs
 04. React Router DOM
 05. Yarn
 06. React Scripts
